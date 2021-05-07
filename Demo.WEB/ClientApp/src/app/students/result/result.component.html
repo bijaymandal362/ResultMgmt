@@ -1,0 +1,113 @@
+<div mat-dialog-title>
+
+  <div align="end">
+    <button mat-fab class="action-button-print m-r-10"
+      matTooltip="{{ 'Print' }}" mat-raised-button color="primary"
+      printSectionId="printContent" ngxPrint>
+      <mat-icon>print</mat-icon>
+    </button>
+
+    <button mat-fab class="action-button-print m-r-10"
+    matTooltip="{{ 'Email' }}" (click)="mailClick()" mat-raised-button color="accent"
+    printSectionId="Email" ngxPrint>
+    <mat-icon>send</mat-icon>
+  </button>
+
+
+    <mat-icon   (click)="cancelClick()" matTooltip="{{ 'Close' }}"
+      class="closeFormId">close</mat-icon>
+  </div>
+  <div id="print-me">
+    <div mat-dialog-content>
+      <form name="fmApplicant" [formGroup]="fmApplicant">
+
+        <div #printContent id="printContent" class="print-container">
+          <fieldset>
+            <legend>{{ 'Result' }}</legend>
+
+            <div class="d-flex">
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Student Name' }}"
+                  formControlName="Name" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Father Name' }}"
+                  formControlName="ParentName" autocomplete="off">
+              </mat-form-field>
+            </div>
+            <div class="d-flex">
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Guardian Email' }}"
+                  formControlName="ParentEmail" autocomplete="off">
+              </mat-form-field>
+
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>{{ 'Subject' }}</legend>
+            <div class="d-flex">
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Subject_1' }}"
+                  formControlName="SubjectId" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Credit' }}"
+                  formControlName="Credit" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ ' Grade' }}"
+                  formControlName="Grade" autocomplete="off">
+              </mat-form-field>
+            </div>
+            <div class="d-flex">
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Subject_2'}}"
+                  formControlName="SubjectId" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Credit' }}"
+                  formControlName="Credit" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ ' Grade' }}"
+                  formControlName="Grade" autocomplete="off">
+              </mat-form-field>
+            </div>
+            <div class="d-flex">
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Subject_3' }}"
+                  formControlName="SubjectId" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Credit' }}"
+                  formControlName="Credit" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ ' Grade' }}"
+                  formControlName="Grade" autocomplete="off">
+              </mat-form-field>
+            </div>
+            <div class="d-flex">
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Subject_4' }}"
+                  formControlName="SubjectId" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ 'Credit' }}"
+                  formControlName="Credit" autocomplete="off">
+              </mat-form-field>
+              <mat-form-field class="flex-1 m-lr-2">
+                <input matInput placeholder="{{ ' Grade' }}"
+                  formControlName="Grade" autocomplete="off">
+              </mat-form-field>
+            </div>
+          </fieldset>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <mat-dialog-actions align="end">
+    <button mat-raised-button type="submit" (click)="submitForm()"
+      color="primary">{{ 'Save' }}</button>
+  </mat-dialog-actions>

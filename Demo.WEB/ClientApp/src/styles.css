@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+table {
+  width: 100%;
+}
+.input-full-width{
+  width: 100%;
+}
+
+.hightLight{
+  background: #fff;
+}
+
+.mat-dialog-content {
+  transform: none;
+  margin-left: 20px;
+  height: 255px;
+}
+.mat-dialog-actions {
+  margin-bottom: 0;
+}
+
+.mat-dialog-title {
+  display: flex;
+  font-size: large !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 5px !important;
+  border-bottom: 1px solid #adadad !important;
+
+}
+
+.legend {
+  font-size: small;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.fieldset {
+  border: solid 1px #ddc9c9;
+  padding: 10px;
+  margin: 2px;
+}
+
+.mat-row:hover {
+  cursor: pointer;
+}
+.mat-row.hovered {
+  background: #cbd1d5;
+}
+.mat-row.highlighted {
+  background: #cbd1d5;
+}
+
+/*
+  ================================
+              Snackbar
+  ================================
+  */
+  .warning {
+    background-color: orange !important;
+    color: #fff !important;
+  }
+  .success {
+    background-color: green !important;
+    color: #fff !important;
+  }
+  .error {
+    background-color: red !important;
+    color: #fff !important;
+  }
+  .info {
+    background-color: rgb(68, 68, 211) !important;
+    color: #fff !important;
+  }
+  .mat-snack-bar-container {
+    margin-top: 109px !important;
+    margin-right: 5px !important;
+    border-radius: 0 !important;
+  }
+    

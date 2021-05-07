@@ -1,0 +1,53 @@
+<div mat-dialog-title>
+
+  <button mat-raised-button color="accent"  (click)="OpenResult()">Add Result</button>
+  
+
+
+  <button mat-raised-button  (click)="AddClass()">Add Class</button>
+</div>
+<div class="site-content">
+
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="StudentId">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let element">{{element.studentId}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{element.name}}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="ParentName">
+        <th mat-header-cell *matHeaderCellDef>Father's Name</th>
+        <td mat-cell *matCellDef="let element">{{element.parentName}}</td>
+      </ng-container>
+      <ng-container matColumnDef="ParentEmail">
+        <th mat-header-cell *matHeaderCellDef>Gurdain's Email</th>
+        <td mat-cell *matCellDef="let element">{{element.parentEmail}}</td>
+      </ng-container>
+
+
+      <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;let entry"
+        [ngClass]="{}"(click)="rowClick(row)"></tr> -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row matRipple class="element-row" *matRowDef="let row; columns: displayedColumns;"
+          (click)="rowClick(row)"  tabindex="0" 
+        
+          [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}"
+          (mouseover)="row.hovered = true; selection = selection;" (mouseout)="row.hovered = false"></tr>
+  
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+ 
+</div>
+
+

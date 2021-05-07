@@ -1,0 +1,36 @@
+<div mat-dialog-title>
+
+  <mat-icon (click)="cancelClick()" matTooltip="{{ 'Close' }}"
+    >close</mat-icon>
+</div>
+
+<div mat-dialog-content>
+  <form name="fmClass" [formGroup]="fmClass" class="formKeyId">
+    <fieldset>
+      <legend>{{ 'Class' }}</legend>
+
+      <div class="d-flex">
+        <mat-form-field class="flex-1 m-lr-2">
+          <input matInput placeholder="{{ 'Class' }}"
+            formControlName="Class" autocomplete="off">
+        </mat-form-field>
+       
+
+        <mat-form-field class="flex-1 m-lr-2">
+          <mat-select placeholder="{{ 'Student' }}" formControlName="StudentId">
+            <mat-option *ngFor="let dt of dataSource;" [value]="dt.StudentId">
+              {{ dt.Name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </fieldset>
+
+  </form>
+</div>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button type="submit" (click)="submitForm()"
+    color="primary">{{ 'Save' }}</button>
+</mat-dialog-actions>
